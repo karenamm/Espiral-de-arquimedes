@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gráfico de la muestra</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div class="shell">
+        <div class="header">
+            <h1>Gráfico de la muestra</h1>
+            <div class="nav">
+                <a class="btn" href="index.html">Menú</a>
+                <a class="btn" href="patient.html">Pacientes</a>
+                <a class="btn" href="samples.html">Muestras</a>
+                <a class="btn secondary" id="backToList">Volver a lista</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 id="sampleTitle">Muestra</h2>
+
+            <div class="table-wrap">
+                <h3>Señal en el tiempo</h3>
+                <canvas id="timegraph" height="140"></canvas>
+            </div>
+
+            <div class="table-wrap" style="margin-top:16px">
+                <h3>Espectro (FFT)</h3>
+                <canvas id="fftgraph" height="140"></canvas>
+            </div>
+
+            <div id="status" class="alert info mt-16">Cargando…</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="graph.js"></script>
+</body>
+</html>

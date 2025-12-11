@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Muestras por Paciente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="shell">
+    <div class="header">
+      <h1>Muestras por Paciente</h1>
+      <div class="nav">
+        <a href="index.html" class="btn">Menu</a>
+        <a href="patient.html" class="btn">Pacientes</a>
+        <a href="samples.html" class="btn">Muestras</a>
+      </div>
+    </div>
+
+    <div class="card" id="patientCard" style="margin-bottom:14px">
+      <h2 id="patientTitle">Paciente</h2>
+      <p class="subtle" id="patientMeta"></p>
+    </div>
+
+    <div class="card">
+      <h2>Listado de Muestras</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID Muestra</th>
+              <th>SamplingRate</th>
+              <th>Timestamp</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="samplesByPatient"></tbody>
+        </table>
+      </div>
+      <div id="status" class="alert" style="display:none"></div>
+    </div>
+  </div>
+
+  <script src="lista-muestra.js"></script>
+</body>
+</html>

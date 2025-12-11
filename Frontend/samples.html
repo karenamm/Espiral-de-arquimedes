@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Muestras</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Gestión de Muestras</h1>
+
+    <input id="patientIdInput" placeholder="ID del paciente"><br>
+    <button id="createSampleButton" type="button" class="btn" disabled>Crear muestra</button>
+    <button id="connectSerialButton" class="btn">Conectar ESP32 (USB)</button>
+    <div id="status" class="status"></div>
+
+    <h2>Muestras registradas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID Muestra</th>
+          <th>ID Paciente</th>
+          <th>Paciente</th>
+          <th>SamplingRate</th>
+          <th>Timestamp</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="samplesContainer"></tbody>
+    </table>
+
+    <div class="btn-row">
+      <a href="index.html" class="btn">Menú</a>
+      <a href="patient.html" class="btn">Pacientes</a>
+    </div>
+  </div>
+
+  <script src="sample.js"></script>
+</body>
+</html>

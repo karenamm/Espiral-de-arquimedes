@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Pacientes</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="shell">
+    <div class="header">
+      <h1>Gestión de Pacientes</h1>
+      <div class="nav">
+        <a href="index.html" class="btn">Menú</a>
+        <a href="samples.html" class="btn">Muestras</a>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <!-- Columna izquierda: crear/eliminar -->
+      <div class="col">
+        <div class="card">
+          <h2>Crear paciente</h2>
+          <div class="form-row">
+            <input id="nameInput" placeholder="Nombre">
+            <input id="lastNameInput" placeholder="Apellido">
+            <input id="nationalIdInput" placeholder="Cédula">
+            <input id="imageUrlInput" placeholder="URL de imagen">
+          </div>
+          <div class="btn-row">
+            <button id="createPatientButton" class="btn">Crear paciente</button>
+          </div>
+        </div>
+
+        <div class="card mt-16">
+          <h2>Eliminar paciente</h2>
+          <div class="form-row">
+            <input id="deleteIdInput" placeholder="ID del paciente">
+          </div>
+          <div class="btn-row">
+            <button id="deletePatientButton" class="btn">Eliminar paciente</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha: listado -->
+      <div class="col">
+        <div class="card">
+          <h2>Pacientes creados</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Cédula</th>
+                  <th>Imagen</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="patientsContainer"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="patient.js"></script>
+</body>
+</html>
